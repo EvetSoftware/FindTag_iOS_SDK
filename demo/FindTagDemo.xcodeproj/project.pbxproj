@@ -1,0 +1,395 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		077DB6BFA65E4EDB4D5936E3 /* sdk-findtag-release.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 36BE45AE44459794F3956D1B /* sdk-findtag-release.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0C3F9743BA60BB6E076B23FB /* DeviceListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 814A355B3BC93270182C5791 /* DeviceListViewController.m */; };
+		21F9798EAB048B1620144E6D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C27A76DA26F9CDD127AE77F /* Foundation.framework */; };
+		34440286AD5670C9D36A29DA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 292B6A43F5742B70D0DBD986 /* AppDelegate.m */; };
+		37FB769D96EFF3E5D2860940 /* sdk-findtag-release.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36BE45AE44459794F3956D1B /* sdk-findtag-release.xcframework */; };
+		4A4B6B851D0C4CA364A26262 /* DemoState.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AF57B3F11A409EFC07EB74C /* DemoState.m */; };
+		4C97CC0E0D76C501B83CCF93 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 510E55359C13207B259DBB3B /* SearchViewController.m */; };
+		526F404D77600BDD5D605615 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E4469D86B425AD928254D38 /* RegisterViewController.m */; };
+		595B2B2CD47E1D7C889B6779 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A77D7FF6A92CA6A19283414D /* main.m */; };
+		B7546CE315A7C51C6272FD2D /* DemoBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B64C2A1A3FE5088D731A095 /* DemoBaseViewController.m */; };
+		BB8FB9FA5AA87EA5B2D3920A /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88344FB803FE0EAC9A15F14F /* LoginViewController.m */; };
+		BE00BA38533E5061577E8395 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DEAFF5CA9395B2789E937C9 /* HomeViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		84C4F6AC740088391CDD66E7 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				077DB6BFA65E4EDB4D5936E3 /* sdk-findtag-release.xcframework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		0358E88B3E83F5CBA6F666F2 /* DemoBaseViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = DemoBaseViewController.h; sourceTree = "<group>"; };
+		0A1B9D6692C8981023CDB600 /* FindTagDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FindTagDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1A7CF2D18F185B0C1C366C7B /* HomeViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		1AF57B3F11A409EFC07EB74C /* DemoState.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = DemoState.m; sourceTree = "<group>"; };
+		1E4469D86B425AD928254D38 /* RegisterViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
+		201E2C52B67A195D25467C2A /* RegisterViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
+		23C2911FDBC512A11F55A332 /* SearchViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
+		292B6A43F5742B70D0DBD986 /* AppDelegate.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		36BE45AE44459794F3956D1B /* sdk-findtag-release.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; name = "sdk-findtag-release.xcframework"; path = "../libs/sdk-findtag-release.xcframework"; sourceTree = "<group>"; };
+		510E55359C13207B259DBB3B /* SearchViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
+		5B64C2A1A3FE5088D731A095 /* DemoBaseViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = DemoBaseViewController.m; sourceTree = "<group>"; };
+		814A355B3BC93270182C5791 /* DeviceListViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = DeviceListViewController.m; sourceTree = "<group>"; };
+		88344FB803FE0EAC9A15F14F /* LoginViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		8C27A76DA26F9CDD127AE77F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		9DEAFF5CA9395B2789E937C9 /* HomeViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		A159EEF52AB66C985F28D1EC /* LoginViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		A77D7FF6A92CA6A19283414D /* main.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		BAC684D995D643A073A52E87 /* DemoState.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = DemoState.h; sourceTree = "<group>"; };
+		C8FECA9E45178A6A8B3E08D2 /* DeviceListViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = DeviceListViewController.h; sourceTree = "<group>"; };
+		DE891DCD89E6BDD22723A404 /* AppDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F68F9E93577337D534860ADA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				21F9798EAB048B1620144E6D /* Foundation.framework in Frameworks */,
+				37FB769D96EFF3E5D2860940 /* sdk-findtag-release.xcframework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7918CC23C5CE4A3B8D10860B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				934C10FDD95882E12D6D5A1B /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		934C10FDD95882E12D6D5A1B /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				8C27A76DA26F9CDD127AE77F /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		9F34843E6553C65394381948 /* FindTagDemo */ = {
+			isa = PBXGroup;
+			children = (
+				DE891DCD89E6BDD22723A404 /* AppDelegate.h */,
+				292B6A43F5742B70D0DBD986 /* AppDelegate.m */,
+				0358E88B3E83F5CBA6F666F2 /* DemoBaseViewController.h */,
+				5B64C2A1A3FE5088D731A095 /* DemoBaseViewController.m */,
+				BAC684D995D643A073A52E87 /* DemoState.h */,
+				1AF57B3F11A409EFC07EB74C /* DemoState.m */,
+				C8FECA9E45178A6A8B3E08D2 /* DeviceListViewController.h */,
+				814A355B3BC93270182C5791 /* DeviceListViewController.m */,
+				1A7CF2D18F185B0C1C366C7B /* HomeViewController.h */,
+				9DEAFF5CA9395B2789E937C9 /* HomeViewController.m */,
+				A159EEF52AB66C985F28D1EC /* LoginViewController.h */,
+				88344FB803FE0EAC9A15F14F /* LoginViewController.m */,
+				201E2C52B67A195D25467C2A /* RegisterViewController.h */,
+				1E4469D86B425AD928254D38 /* RegisterViewController.m */,
+				23C2911FDBC512A11F55A332 /* SearchViewController.h */,
+				510E55359C13207B259DBB3B /* SearchViewController.m */,
+				A77D7FF6A92CA6A19283414D /* main.m */,
+			);
+			name = FindTagDemo;
+			path = FindTagDemo;
+			sourceTree = "<group>";
+		};
+		C73A2BAC9BB6BD88542F018A = {
+			isa = PBXGroup;
+			children = (
+				DA2CEAB0ED1534515791A55E /* Products */,
+				7918CC23C5CE4A3B8D10860B /* Frameworks */,
+				9F34843E6553C65394381948 /* FindTagDemo */,
+				36BE45AE44459794F3956D1B /* sdk-findtag-release.xcframework */,
+			);
+			sourceTree = "<group>";
+		};
+		DA2CEAB0ED1534515791A55E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0A1B9D6692C8981023CDB600 /* FindTagDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F0267892E1C493308A545D38 /* FindTagDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A337858051BBD21FC341B529 /* Build configuration list for PBXNativeTarget "FindTagDemo" */;
+			buildPhases = (
+				EAC7213D53F9BE089A831DA2 /* Sources */,
+				F68F9E93577337D534860ADA /* Frameworks */,
+				F71381BDF883DDC4F77E5A16 /* Resources */,
+				84C4F6AC740088391CDD66E7 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FindTagDemo;
+			productName = FindTagDemo;
+			productReference = 0A1B9D6692C8981023CDB600 /* FindTagDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		687B027CFBFCE9EFE5C16BB6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 2650;
+			};
+			buildConfigurationList = 014DF3572AD8E54E86B93EBB /* Build configuration list for PBXProject "FindTagDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C73A2BAC9BB6BD88542F018A;
+			productRefGroup = DA2CEAB0ED1534515791A55E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F0267892E1C493308A545D38 /* FindTagDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F71381BDF883DDC4F77E5A16 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EAC7213D53F9BE089A831DA2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				34440286AD5670C9D36A29DA /* AppDelegate.m in Sources */,
+				B7546CE315A7C51C6272FD2D /* DemoBaseViewController.m in Sources */,
+				4A4B6B851D0C4CA364A26262 /* DemoState.m in Sources */,
+				0C3F9743BA60BB6E076B23FB /* DeviceListViewController.m in Sources */,
+				BE00BA38533E5061577E8395 /* HomeViewController.m in Sources */,
+				BB8FB9FA5AA87EA5B2D3920A /* LoginViewController.m in Sources */,
+				526F404D77600BDD5D605615 /* RegisterViewController.m in Sources */,
+				4C97CC0E0D76C501B83CCF93 /* SearchViewController.m in Sources */,
+				595B2B2CD47E1D7C889B6779 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1BFBF840EA6F06BA3A26BFCD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		96D04E96BA976C8F89F9E268 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_STYLE = Automatic;
+				DEMO_BRAND_NAME = FindTag;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = FindTagDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.mytag.demo.findtag;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DC3367F7DC9CA49B41FEAB3F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		F209E4679C533C68E16403E5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_STYLE = Automatic;
+				DEMO_BRAND_NAME = FindTag;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = FindTagDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.mytag.demo.findtag;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		014DF3572AD8E54E86B93EBB /* Build configuration list for PBXProject "FindTagDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1BFBF840EA6F06BA3A26BFCD /* Debug */,
+				DC3367F7DC9CA49B41FEAB3F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A337858051BBD21FC341B529 /* Build configuration list for PBXNativeTarget "FindTagDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				96D04E96BA976C8F89F9E268 /* Release */,
+				F209E4679C533C68E16403E5 /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 687B027CFBFCE9EFE5C16BB6 /* Project object */;
+}

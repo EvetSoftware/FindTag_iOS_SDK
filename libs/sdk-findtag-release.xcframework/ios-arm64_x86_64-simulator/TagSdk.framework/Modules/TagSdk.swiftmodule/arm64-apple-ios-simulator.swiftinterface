@@ -1,0 +1,304 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.3.2 effective-5.10 (swiftlang-6.3.2.1.108 clang-2100.1.1.101)
+// swift-module-flags: -target arm64-apple-ios15.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name TagSdk
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.3.2
+import CommonCrypto
+import CoreBluetooth
+import Foundation
+import Security
+import Swift
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+@objc public protocol TagSubscription {
+  @objc func cancel()
+}
+@objc public protocol TagScanListener {
+  @objc func onDeviceFound(_ device: TagSdk.TagDevice)
+  @objc func onScanFinished(_ reason: TagSdk.TagScanFinishReason)
+  @objc func onScanFailed(_ error: TagSdk.TagError)
+}
+@objc public protocol TagBluetoothStateListener {
+  @objc func onStateChanged(_ state: TagSdk.TagBluetoothState)
+}
+@objc public protocol TagCustomerBindingCompletion {
+  @objc func complete(_ decision: TagSdk.TagCustomerBindingDecision)
+}
+@objc public protocol CustomerBindingHandler {
+  @objc func bind(_ request: TagSdk.TagCustomerBindingRequest, completion: any TagSdk.TagCustomerBindingCompletion)
+}
+@objc @objcMembers final public class TagError : ObjectiveC.NSObject, Swift.Error {
+  @objc final public let code: Swift.String
+  @objc final public let message: Swift.String
+  @objc final public let serverCode: Swift.String?
+  @objc final public let platformCause: Foundation.NSError?
+  @objc public init(code: Swift.String, message: Swift.String, serverCode: Swift.String? = nil, platformCause: Foundation.NSError? = nil)
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @objcMembers final public class TagErrorCode : ObjectiveC.NSObject {
+  @objc public static let notInitialized: Swift.String
+  @objc public static let sdkAlreadyInitialized: Swift.String
+  @objc public static let invalidArgument: Swift.String
+  @objc public static let featureNotAvailable: Swift.String
+  @objc public static let bluetoothUnavailable: Swift.String
+  @objc public static let permissionDenied: Swift.String
+  @objc public static let scanAlreadyRunning: Swift.String
+  @objc public static let scanFailed: Swift.String
+  @objc public static let connectionFailed: Swift.String
+  @objc public static let connectionTimeout: Swift.String
+  @objc public static let serviceDiscoveryFailed: Swift.String
+  @objc public static let notifyEnableFailed: Swift.String
+  @objc public static let gattWriteFailed: Swift.String
+  @objc public static let commandTimeout: Swift.String
+  @objc public static let disconnected: Swift.String
+  @objc public static let sdkReleased: Swift.String
+  @objc public static let frameFormatError: Swift.String
+  @objc public static let payloadTooLarge: Swift.String
+  @objc public static let checksumError: Swift.String
+  @objc public static let responseMismatch: Swift.String
+  @objc public static let unknownResponse: Swift.String
+  @objc public static let deviceRejected: Swift.String
+  @objc public static let keyMissing: Swift.String
+  @objc public static let bindingUnsupported: Swift.String
+  @objc public static let alreadyBound: Swift.String
+  @objc public static let customerManagedOperation: Swift.String
+  @objc public static let customerBindingHandlerMissing: Swift.String
+  @objc public static let openApiCredentialMissing: Swift.String
+  @objc public static let openApiDeviceKeyUnsupported: Swift.String
+  @objc public static let customerBindingRejected: Swift.String
+  @objc public static let customerBindingTimeout: Swift.String
+  @objc public static let networkError: Swift.String
+  @objc public static let authenticationFailed: Swift.String
+  @objc public static let serverError: Swift.String
+  @objc public static let logExportFailed: Swift.String
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc public enum TagIntegrationMode : Swift.Int {
+  case official
+  case customerManaged
+  public var wireValue: Swift.String {
+    get
+  }
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc @objcMembers final public class TagOpenApiCredential : ObjectiveC.NSObject {
+  @objc final public let apiKey: Swift.String
+  @objc final public let apiSecret: Swift.String
+  @objc public init(apiKey: Swift.String, apiSecret: Swift.String)
+  @objc deinit
+}
+@objc @objcMembers final public class TagSdkConfig : ObjectiveC.NSObject {
+  @objc final public let integrationMode: TagSdk.TagIntegrationMode
+  @objc final public let openApiCredential: TagSdk.TagOpenApiCredential?
+  @objc final public let customerBindingTimeoutMs: Swift.Int64
+  @objc final public let customerBindingHandler: (any TagSdk.CustomerBindingHandler)?
+  @objc final public let logEnabled: Swift.Bool
+  @objc public init(integrationMode: TagSdk.TagIntegrationMode, openApiCredential: TagSdk.TagOpenApiCredential? = nil, customerBindingTimeoutMs: Swift.Int64 = 30_000, customerBindingHandler: (any TagSdk.CustomerBindingHandler)? = nil, logEnabled: Swift.Bool = true)
+  @objc deinit
+}
+@objc @objcMembers final public class TagScanOptions : ObjectiveC.NSObject {
+  @objc final public let timeoutMs: Swift.Int64
+  @objc public init(timeoutMs: Swift.Int64 = 15_000)
+  @objc deinit
+}
+@objc public enum TagScanFinishReason : Swift.Int {
+  case timeout
+  case stopped
+  case operationStarted
+  public var wireValue: Swift.String {
+    get
+  }
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc public enum TagBluetoothState : Swift.Int {
+  case unknown
+  case poweredOff
+  case poweredOn
+  case unauthorized
+  public var wireValue: Swift.String {
+    get
+  }
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc @_hasMissingDesignatedInitializers @objcMembers final public class TagDevice : ObjectiveC.NSObject {
+  @objc final public let id: Swift.String
+  @objc final public let name: Swift.String?
+  @objc final public var rssi: Swift.Int {
+    get
+  }
+  @objc final public let platformAddress: Swift.String?
+  @objc final public let advertisedMac: Swift.String?
+  @objc deinit
+}
+@objc @_hasMissingDesignatedInitializers @objcMembers final public class TagLoginCapabilities : ObjectiveC.NSObject {
+  @objc final public let supportsBattery: Swift.Bool
+  @objc final public let supportsV2Binding: Swift.Bool
+  @objc final public let supportsElectronicFence: Swift.Bool
+  @objc deinit
+}
+@objc @_hasMissingDesignatedInitializers @objcMembers final public class TagBatteryInfo : ObjectiveC.NSObject {
+  @objc final public let rawBattery: Swift.Int
+  @objc final public let serverLevel: Swift.Int
+  @objc deinit
+}
+@objc @objcMembers final public class TagDeviceKey : ObjectiveC.NSObject {
+  @objc final public let deviceKey: Swift.String
+  @objc public init(deviceKey: Swift.String)
+  @objc deinit
+}
+@objc @_hasMissingDesignatedInitializers @objcMembers final public class TagBindingInfo : ObjectiveC.NSObject {
+  @objc final public let primaryDeviceKey: TagSdk.TagDeviceKey
+  @objc deinit
+}
+@objc @_hasMissingDesignatedInitializers @objcMembers final public class TagCustomerBindingRequest : ObjectiveC.NSObject {
+  @objc final public let bindingInfo: TagSdk.TagBindingInfo
+  @objc deinit
+}
+@objc @objcMembers final public class TagCustomerBindingError : ObjectiveC.NSObject {
+  @objc final public let message: Swift.String?
+  @objc final public let platformCause: Foundation.NSError?
+  @objc public init(message: Swift.String? = nil, platformCause: Foundation.NSError? = nil)
+  @objc deinit
+}
+@objc @_hasMissingDesignatedInitializers @objcMembers final public class TagCustomerBindingDecision : ObjectiveC.NSObject {
+  @objc final public let isApproved: Swift.Bool
+  @objc final public let error: TagSdk.TagCustomerBindingError?
+  @objc public static func approved() -> TagSdk.TagCustomerBindingDecision
+  @objc public static func rejected(_ error: TagSdk.TagCustomerBindingError? = nil) -> TagSdk.TagCustomerBindingDecision
+  @objc deinit
+}
+@objc @_hasMissingDesignatedInitializers @objcMembers final public class FindDeviceResult : ObjectiveC.NSObject {
+  @objc final public let scanDeviceId: Swift.String
+  @objc final public let triggered: Swift.Bool
+  @objc final public let capabilities: TagSdk.TagLoginCapabilities?
+  @objc final public let battery: TagSdk.TagBatteryInfo?
+  @objc deinit
+}
+@objc @objcMembers final public class TagRegisterRequest : ObjectiveC.NSObject {
+  @objc final public let username: Swift.String
+  @objc final public let password: Swift.String
+  @objc public init(username: Swift.String, password: Swift.String)
+  @objc deinit
+}
+@objc @objcMembers final public class TagLoginRequest : ObjectiveC.NSObject {
+  @objc final public let username: Swift.String
+  @objc final public let password: Swift.String
+  @objc public init(username: Swift.String, password: Swift.String)
+  @objc deinit
+}
+@objc @objcMembers final public class TagAccount : ObjectiveC.NSObject, Foundation.NSSecureCoding {
+  @objc public static var supportsSecureCoding: Swift.Bool {
+    @objc get
+  }
+  @objc final public let accountId: Swift.String
+  @objc final public let username: Swift.String
+  @objc final public let nickname: Swift.String?
+  @objc final public let email: Swift.String?
+  @objc public init(accountId: Swift.String, username: Swift.String, nickname: Swift.String?, email: Swift.String?)
+  @objc required public init?(coder: Foundation.NSCoder)
+  @objc final public func encode(with coder: Foundation.NSCoder)
+  @objc deinit
+}
+@objc @_hasMissingDesignatedInitializers @objcMembers final public class TagDeviceInfo : ObjectiveC.NSObject {
+  @objc final public let serverRecordId: Swift.String
+  @objc final public let tagDeviceId: Swift.String?
+  @objc final public let deviceName: Swift.String
+  @objc final public let macAddresses: [Swift.String]
+  @objc final public let primaryDeviceKey: TagSdk.TagDeviceKey
+  @objc final public let batteryLevel: Foundation.NSNumber?
+  @objc final public let deviceType: Swift.String
+  @objc final public let deviceModelRawValue: Foundation.NSNumber?
+  @objc final public let supportsElectronicFence: Swift.Bool
+  @objc final public let relationshipType: Swift.String?
+  @objc deinit
+}
+@objc @objcMembers final public class TagDeviceUpdateRequest : ObjectiveC.NSObject {
+  @objc final public let deviceKey: TagSdk.TagDeviceKey
+  @objc final public let deviceName: Swift.String
+  @objc final public let deviceType: Swift.String
+  @objc public init(deviceKey: TagSdk.TagDeviceKey, deviceName: Swift.String, deviceType: Swift.String)
+  @objc deinit
+}
+@objc public enum TagDeviceDataPreset : Swift.Int {
+  case latest, last1Hour, last2Hours, last4Hours, last6Hours, custom
+  public var wireValue: Swift.String {
+    get
+  }
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc @objcMembers final public class TagDeviceDataQuery : ObjectiveC.NSObject {
+  @objc final public let deviceKey: TagSdk.TagDeviceKey
+  @objc final public let preset: TagSdk.TagDeviceDataPreset
+  @objc final public let startTimeMs: Foundation.NSNumber?
+  @objc final public let endTimeMs: Foundation.NSNumber?
+  @objc public init(deviceKey: TagSdk.TagDeviceKey, preset: TagSdk.TagDeviceDataPreset, startTimeMs: Foundation.NSNumber? = nil, endTimeMs: Foundation.NSNumber? = nil)
+  @objc deinit
+}
+@objc @_hasMissingDesignatedInitializers @objcMembers final public class TagDeviceData : ObjectiveC.NSObject {
+  @objc final public let deviceKey: TagSdk.TagDeviceKey
+  @objc final public let collectionTimeMs: Swift.Int64
+  @objc final public let longitude: Swift.Double
+  @objc final public let latitude: Swift.Double
+  @objc final public let batteryLevel: Foundation.NSNumber?
+  @objc final public let accuracyLevel: Foundation.NSNumber?
+  @objc final public let googleLocation: Swift.Bool
+  @objc deinit
+}
+@objc @_hasMissingDesignatedInitializers @objcMembers final public class TagLogArchive : ObjectiveC.NSObject {
+  @objc final public let filePath: Swift.String
+  @objc final public let fileSizeBytes: Swift.Int64
+  @objc final public let createdAtMs: Swift.Int64
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @objcMembers final public class TagSdk : ObjectiveC.NSObject {
+  @objc(initializeWithConfig:) public static func initialize(config: TagSdk.TagSdkConfig) -> TagSdk.TagError?
+  @objc public static func getSdkVersion() -> Swift.String
+  @objc public static func setLogEnabled(_ enabled: Swift.Bool)
+  @objc public static func exportLogs(_ completion: @escaping (TagSdk.TagLogArchive?, TagSdk.TagError?) -> Swift.Void)
+  @objc public static func startScan(options: TagSdk.TagScanOptions = TagScanOptions(), listener: any TagSdk.TagScanListener) -> any TagSdk.TagSubscription
+  @objc public static func stopScan()
+  @objc public static func observeBluetoothState(_ listener: any TagSdk.TagBluetoothStateListener) -> any TagSdk.TagSubscription
+  @objc public static func connectAndBindDevice(_ device: TagSdk.TagDevice, completion: @escaping (TagSdk.TagBindingInfo?, TagSdk.TagError?) -> Swift.Void)
+  @objc public static func findDevice(_ device: TagSdk.TagDevice, completion: @escaping (TagSdk.FindDeviceResult?, TagSdk.TagError?) -> Swift.Void)
+  @objc public static func register(_ request: TagSdk.TagRegisterRequest, completion: @escaping (TagSdk.TagAccount?, TagSdk.TagError?) -> Swift.Void)
+  @objc public static func login(_ request: TagSdk.TagLoginRequest, completion: @escaping (TagSdk.TagAccount?, TagSdk.TagError?) -> Swift.Void)
+  @objc public static func getCurrentAccount() -> TagSdk.TagAccount?
+  @objc public static func logout()
+  @objc public static func getDeviceList(_ completion: @escaping ([TagSdk.TagDeviceInfo]?, TagSdk.TagError?) -> Swift.Void)
+  @objc public static func updateDeviceInfo(_ request: TagSdk.TagDeviceUpdateRequest, completion: @escaping (Foundation.NSNumber?, TagSdk.TagError?) -> Swift.Void)
+  @objc public static func unbindDevice(_ key: TagSdk.TagDeviceKey, completion: @escaping (Foundation.NSNumber?, TagSdk.TagError?) -> Swift.Void)
+  @objc public static func getDeviceData(_ query: TagSdk.TagDeviceDataQuery, completion: @escaping ([TagSdk.TagDeviceData]?, TagSdk.TagError?) -> Swift.Void)
+  @objc(releaseSdk) public static func releaseSdk()
+  @nonobjc public static func release()
+  @objc override dynamic public init()
+  @objc deinit
+}
+extension TagSdk.TagIntegrationMode : Swift.Equatable {}
+extension TagSdk.TagIntegrationMode : Swift.Hashable {}
+extension TagSdk.TagIntegrationMode : Swift.RawRepresentable {}
+extension TagSdk.TagScanFinishReason : Swift.Equatable {}
+extension TagSdk.TagScanFinishReason : Swift.Hashable {}
+extension TagSdk.TagScanFinishReason : Swift.RawRepresentable {}
+extension TagSdk.TagBluetoothState : Swift.Equatable {}
+extension TagSdk.TagBluetoothState : Swift.Hashable {}
+extension TagSdk.TagBluetoothState : Swift.RawRepresentable {}
+extension TagSdk.TagDeviceDataPreset : Swift.Equatable {}
+extension TagSdk.TagDeviceDataPreset : Swift.Hashable {}
+extension TagSdk.TagDeviceDataPreset : Swift.RawRepresentable {}
