@@ -11,7 +11,7 @@ let package = Package(
     targets: [
         .binaryTarget(
             name: "TagSdk",
-            path: "libs/sdk-findtag-release.xcframework"
+            path: "libs/TagSdk.xcframework"
         ),
     ]
 )
