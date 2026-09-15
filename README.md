@@ -17,6 +17,24 @@ This repository provides the FindTag iOS SDK, a demo application, and integratio
 - Current version: `V1_0828`
 - SDK file: [sdk-findtag-release.xcframework](libs/sdk-findtag-release.xcframework)
 
+## Swift Package Manager
+
+Add the package URL and select version `1.0.0`:
+
+```text
+https://github.com/EvetSoftware/FindTag_iOS_SDK.git
+```
+
+The package product and imported module are both named `TagSdk`.
+
+## CocoaPods
+
+Reference the tagged pod directly from GitHub:
+
+```ruby
+pod 'FindTagSDK', :git => 'https://github.com/EvetSoftware/FindTag_iOS_SDK.git', :tag => '1.0.0'
+```
+
 ## Integration Guides
 
 - [English integration guide](docs/tag-sdk-ios-integration-guide-en.md)
